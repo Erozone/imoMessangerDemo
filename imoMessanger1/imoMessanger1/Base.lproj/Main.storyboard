@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5JX-AZ-Sjf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FrontPageView Controller-->
+        <scene sceneID="fgj-p8-kwu">
+            <objects>
+                <viewController id="alM-E7-Nsx" userLabel="FrontPageView Controller" customClass="FrontViewController" customModule="imoMessanger1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OG8-5c-to5"/>
+                        <viewControllerLayoutGuide type="bottom" id="dOU-ym-waB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AGn-nz-PvW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recent" id="a2z-D1-4gi">
+                        <barButtonItem key="leftBarButtonItem" title="Set" id="g0h-6P-Ha5"/>
+                        <barButtonItem key="rightBarButtonItem" title="New" id="0pN-Nm-52w"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="ycX-Zh-9eQ" id="kjP-ze-jSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5v-cX-Z6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="ycX-Zh-9eQ">
+                    <connections>
+                        <outlet property="delegate" destination="alM-E7-Nsx" id="JcZ-mF-CfH"/>
+                        <outlet property="searchContentsController" destination="alM-E7-Nsx" id="evG-r2-3mO"/>
+                        <outlet property="searchResultsDataSource" destination="alM-E7-Nsx" id="MXu-bO-nXu"/>
+                        <outlet property="searchResultsDelegate" destination="alM-E7-Nsx" id="mZ4-5J-n3r"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1680.8" y="1348.8755622188908"/>
+        </scene>
+        <!--ContactsView Controller-->
+        <scene sceneID="ftv-fQ-38m">
+            <objects>
+                <viewController id="tvD-2D-4wP" userLabel="ContactsView Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fIw-g8-VE0"/>
+                        <viewControllerLayoutGuide type="bottom" id="7wv-3q-3lW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xwy-Tm-gDa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recent" id="41t-5B-l5Y">
+                        <barButtonItem key="leftBarButtonItem" title="Set" id="Xp9-26-mzL"/>
+                        <barButtonItem key="rightBarButtonItem" title="New" id="epr-em-lsB"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="pEk-Oo-6bR" id="tXw-ai-Rr4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvY-y1-MPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="pEk-Oo-6bR">
+                    <connections>
+                        <outlet property="delegate" destination="tvD-2D-4wP" id="2V2-md-3bi"/>
+                        <outlet property="searchContentsController" destination="tvD-2D-4wP" id="5ru-UA-owY"/>
+                        <outlet property="searchResultsDataSource" destination="tvD-2D-4wP" id="s3T-4P-gab"/>
+                        <outlet property="searchResultsDelegate" destination="tvD-2D-4wP" id="LBC-U5-ds0"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1680.8" y="2043.3283358320841"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="0Z6-2T-gX8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Sf-kT-xdI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="D0I-IS-But" userLabel="Contacts"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hsY-xF-zuy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tvD-2D-4wP" kind="relationship" relationship="rootViewController" id="hCF-4G-ODD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcP-Xv-cJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="2044.2278860569718"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="XkC-Ni-hEd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TPV-bU-V6q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jPd-dj-xTy" userLabel="Chats"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="233-h3-5nb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="alM-E7-Nsx" kind="relationship" relationship="rootViewController" id="gdb-CD-Aaq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYf-BX-wjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="1349"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kmj-Xu-CAs">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5JX-AZ-Sjf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZFI-Au-B07">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TPV-bU-V6q" kind="relationship" relationship="viewControllers" id="ac7-wu-Jnu"/>
+                        <segue destination="1Sf-kT-xdI" kind="relationship" relationship="viewControllers" id="9Zg-QX-h66"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XU1-qp-kH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="1694"/>
+        </scene>
+    </scenes>
+</document>
