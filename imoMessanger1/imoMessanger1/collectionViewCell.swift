@@ -16,7 +16,7 @@ class collectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleToFill;
         imageView.layer.cornerRadius=30;
         imageView.layer.masksToBounds=true;
-        imageView.backgroundColor=UIColor.blue;
+        imageView.image=UIImage(named: "PC");
         return imageView;
     }();
     
@@ -30,6 +30,7 @@ class collectionViewCell: UICollectionViewCell {
     let recentMsgLabel:UILabel={
         let label=UILabel();
         label.text="Hello!How are you?Its a Great Day to have fun!";
+        label.font=UIFont.systemFont(ofSize: 14);
         return label;
     }();
     
@@ -37,6 +38,7 @@ class collectionViewCell: UICollectionViewCell {
         let label=UILabel();
         label.text="09-04-2017";
         label.textColor=UIColor.blue;
+        label.font = UIFont.systemFont(ofSize: 14);
         return label;
     }();
 
@@ -50,6 +52,14 @@ class collectionViewCell: UICollectionViewCell {
         let view=UIView();
         view.backgroundColor=UIColor.clear;
         return view
+    }()
+    
+    var videoCallImageView:UIImageView = {
+        let imageView = UIImageView();
+        imageView.layer.masksToBounds = true;
+        imageView.contentMode = .scaleToFill;
+        imageView.image = UIImage(named: "videoCall");
+        return imageView;
     }()
     
     //AWAKE FROM NIB
@@ -78,11 +88,18 @@ class collectionViewCell: UICollectionViewCell {
         containerView.addSubview(nameLabel);
         containerView.addSubview(recentMsgLabel);
         containerView.addSubview(dateAndTimeLabel);
+        containerView.addSubview(videoCallImageView);
         
         addContraintsWithFormat(format: "H:|[v0(110)]", views: nameLabel);
         addContraintsWithFormat(format: "V:|-10-[v0(20)]", views: nameLabel);
+        
         addContraintsWithFormat(format: "H:|-110-[v0]-60-|", views: dateAndTimeLabel);
         addContraintsWithFormat(format: "V:|-10-[v0(20)]", views: dateAndTimeLabel);
+        
+        addContraintsWithFormat(format: "H:|-250-[v0(25)]", views: videoCallImageView);
+        addContraintsWithFormat(format: "V:|-30-[v0(25)]", views: videoCallImageView);
+        addConstraint(NSLayoutConstraint(item: videoCallImageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0));
+        
         addContraintsWithFormat(format: "H:|[v0]-60-|", views: recentMsgLabel);
         addContraintsWithFormat(format: "V:|-45-[v0(20)]", views: recentMsgLabel);
         
@@ -99,6 +116,4 @@ class collectionViewCell: UICollectionViewCell {
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
     }
-    
-    
 }

@@ -23,8 +23,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Recent" id="a2z-D1-4gi">
-                        <barButtonItem key="leftBarButtonItem" title="Set" id="g0h-6P-Ha5"/>
-                        <barButtonItem key="rightBarButtonItem" title="New" id="0pN-Nm-52w"/>
+                        <barButtonItem key="leftBarButtonItem" image="setting" id="obf-UN-Q5I">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rd2-8d-HpU">
+                                <rect key="frame" x="16" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="setting"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="c4h-qH-TyA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qPN-vA-PZI">
+                                <rect key="frame" x="327" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="newMsg"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="ycX-Zh-9eQ" id="kjP-ze-jSp"/>
@@ -45,6 +57,15 @@
         <!--ContactsView Controller-->
         <scene sceneID="ftv-fQ-38m">
             <objects>
+                <searchDisplayController id="pEk-Oo-6bR">
+                    <connections>
+                        <outlet property="delegate" destination="tvD-2D-4wP" id="2V2-md-3bi"/>
+                        <outlet property="searchContentsController" destination="tvD-2D-4wP" id="5ru-UA-owY"/>
+                        <outlet property="searchResultsDataSource" destination="tvD-2D-4wP" id="s3T-4P-gab"/>
+                        <outlet property="searchResultsDelegate" destination="tvD-2D-4wP" id="LBC-U5-ds0"/>
+                    </connections>
+                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvY-y1-MPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tvD-2D-4wP" userLabel="ContactsView Controller" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fIw-g8-VE0"/>
@@ -56,30 +77,33 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Recent" id="41t-5B-l5Y">
-                        <barButtonItem key="leftBarButtonItem" title="Set" id="Xp9-26-mzL"/>
-                        <barButtonItem key="rightBarButtonItem" title="New" id="epr-em-lsB"/>
+                        <barButtonItem key="leftBarButtonItem" id="0sS-bh-iYy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g5M-JU-lp6">
+                                <rect key="frame" x="16" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="setting"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="dTG-AD-0b8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jop-o1-47A">
+                                <rect key="frame" x="327" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="newMsg"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="pEk-Oo-6bR" id="tXw-ai-Rr4"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XvY-y1-MPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="pEk-Oo-6bR">
-                    <connections>
-                        <outlet property="delegate" destination="tvD-2D-4wP" id="2V2-md-3bi"/>
-                        <outlet property="searchContentsController" destination="tvD-2D-4wP" id="5ru-UA-owY"/>
-                        <outlet property="searchResultsDataSource" destination="tvD-2D-4wP" id="s3T-4P-gab"/>
-                        <outlet property="searchResultsDelegate" destination="tvD-2D-4wP" id="LBC-U5-ds0"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1680.8" y="2043.3283358320841"/>
         </scene>
-        <!--Item-->
+        <!--Contacts-->
         <scene sceneID="0Z6-2T-gX8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Sf-kT-xdI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="D0I-IS-But" userLabel="Contacts"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" id="D0I-IS-But" userLabel="Contacts"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hsY-xF-zuy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -94,11 +118,11 @@
             </objects>
             <point key="canvasLocation" x="892" y="2044.2278860569718"/>
         </scene>
-        <!--Item-->
+        <!--Chats-->
         <scene sceneID="XkC-Ni-hEd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TPV-bU-V6q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jPd-dj-xTy" userLabel="Chats"/>
+                    <tabBarItem key="tabBarItem" title="Chats" id="jPd-dj-xTy" userLabel="Chats"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="233-h3-5nb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -119,6 +143,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5JX-AZ-Sjf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZFI-Au-B07">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -132,4 +157,8 @@
             <point key="canvasLocation" x="20" y="1694"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="newMsg" width="32" height="32"/>
+        <image name="setting" width="32" height="32"/>
+    </resources>
 </document>

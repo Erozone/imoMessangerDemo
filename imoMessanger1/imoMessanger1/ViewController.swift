@@ -40,17 +40,25 @@ class FrontViewController: UIViewController{
 extension FrontViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1;
+        return 2;
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20;
+        if(section == 0){
+            return 2;
+        }
+        return 10;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! collectionViewCell;
         cell.awakeFromNib();
+        if(indexPath.section == 0){
+            cell.videoCallImageView.image = UIImage(named: "PC");
+            return cell;
+        }
         return cell;
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
