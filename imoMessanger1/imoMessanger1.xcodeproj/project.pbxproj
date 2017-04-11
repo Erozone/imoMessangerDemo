@@ -15,6 +15,7 @@
 		6913A0BE1E9AB34A00C941E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6913A0BC1E9AB34A00C941E0 /* LaunchScreen.storyboard */; };
 		6913A0C91E9AB34B00C941E0 /* imoMessanger1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6913A0C81E9AB34B00C941E0 /* imoMessanger1UITests.swift */; };
 		6950567B1E9CE28D0030E001 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950567A1E9CE28D0030E001 /* HeaderCell.swift */; };
+		69DA1A1A1E9CF6AF00A8B639 /* dataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA1A191E9CF6AF00A8B639 /* dataFile.swift */; };
 		69FF496C1E9AC1AE009B9CB3 /* collectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FF496B1E9AC1AE009B9CB3 /* collectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		6913A0C81E9AB34B00C941E0 /* imoMessanger1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imoMessanger1UITests.swift; sourceTree = "<group>"; };
 		6913A0CA1E9AB34B00C941E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6950567A1E9CE28D0030E001 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		69DA1A191E9CF6AF00A8B639 /* dataFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataFile.swift; sourceTree = "<group>"; };
 		69FF496B1E9AC1AE009B9CB3 /* collectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				6913A0BC1E9AB34A00C941E0 /* LaunchScreen.storyboard */,
 				6913A0BF1E9AB34A00C941E0 /* Info.plist */,
 				6913A0B71E9AB34A00C941E0 /* imoMessanger1.xcdatamodeld */,
+				69DA1A191E9CF6AF00A8B639 /* dataFile.swift */,
 			);
 			path = imoMessanger1;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				6913A0B11E9AB34A00C941E0 /* AppDelegate.swift in Sources */,
 				69FF496C1E9AC1AE009B9CB3 /* collectionViewCell.swift in Sources */,
 				6913A0B91E9AB34A00C941E0 /* imoMessanger1.xcdatamodeld in Sources */,
+				69DA1A1A1E9CF6AF00A8B639 /* dataFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

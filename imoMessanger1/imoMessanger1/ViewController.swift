@@ -9,7 +9,7 @@
 import UIKit
 
 class FrontViewController: UIViewController{
-
+    
     var collectionView:UICollectionView!
     
     func setupCollectionView()
@@ -19,6 +19,7 @@ class FrontViewController: UIViewController{
         layout.minimumLineSpacing=0;
         collectionView=UICollectionView(frame: view.frame, collectionViewLayout: layout);
         collectionView.register(collectionViewCell.self, forCellWithReuseIdentifier: "cell");
+        collectionView.register(HeaderCell.self, forCellWithReuseIdentifier: "headerCell")
         collectionView.backgroundColor=UIColor.clear;
         collectionView.delegate=self;
         collectionView.dataSource=self;
@@ -51,18 +52,24 @@ extension FrontViewController:UICollectionViewDelegate,UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! collectionViewCell;
-        cell.awakeFromNib();
         if(indexPath.section == 0){
-            cell.videoCallImageView.image = UIImage(named: "PC");
+            let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "headerCell", for: indexPath) as! HeaderCell;
+            if(indexPath.row == 0){
+                cell.setupUpperCell();
+            }else{
+                cell.setupLowerView();
+            }
             return cell;
         }
-        return cell;
-        
+        else{
+            let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! collectionViewCell;
+            cell.awakeFromNib();
+            return cell;
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 80);
+        return CGSize(width: view.frame.width, height: 70);
     }
 }
 
