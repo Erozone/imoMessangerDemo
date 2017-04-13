@@ -25,9 +25,17 @@ class dataFile: NSObject {
 
 class DataSouceForCollectionView{
     
-    let friend1 = dataFile(profilePhoto: UIImage(named:"Mark")!, friendsName: "Mark Zuckerberg", message: "I created facebook.Just tell me your name", dateOfMessage: "10-2-12");
-    let friend2 = dataFile(profilePhoto: UIImage(named:"Steve")!, friendsName: "Steve Jobs", message: "I created Apple.Which iPhone does you use", dateOfMessage: "12-12-17");
-    let friend3 = dataFile(profilePhoto: UIImage(named:"Hilary")!, friendsName: "Hilary Clinton", message: "Vote for me,As you do for bill", dateOfMessage: "1-1-13");
+    var friend1 = dataFile(profilePhoto: UIImage(named:"Mark")!, friendsName: "Mark Zuckerberg", message: "I created facebook.Just tell me your name", dateOfMessage: "10-2-12");
+    var friend2 = dataFile(profilePhoto: UIImage(named:"Steve")!, friendsName: "Steve Jobs", message: "I created Apple.Which iPhone does you use", dateOfMessage: "12-12-17");
+    var friend3 = dataFile(profilePhoto: UIImage(named:"Hilary")!, friendsName: "Hilary Clinton", message: "Vote for me,As you do for bill", dateOfMessage: "1-1-13");
+    var friend4 = dataFile(profilePhoto: UIImage(named:"PC")!, friendsName: "Priyanka Chopra", message: "I am doing well.What's you doing?", dateOfMessage: "11-1-11");
+    var friend5 = dataFile(profilePhoto: UIImage(named:"Donald")!, friendsName: "Donald Trump", message: "You are fired!", dateOfMessage: "12-2-16");
+    var friend6 = dataFile(profilePhoto: UIImage(named:"Gandhi")!, friendsName: "Mahatama Gandhi", message: "Love,Peace and Joy!", dateOfMessage: "1-4-47");
+    
+    func getData()->[NSObject]{
+        let dataArray = [friend1,friend2,friend3,friend4,friend5,friend6];
+        return dataArray;
+    }
     
     
 }

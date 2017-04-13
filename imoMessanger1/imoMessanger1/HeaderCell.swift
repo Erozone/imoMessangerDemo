@@ -10,7 +10,7 @@ import UIKit
 
 class HeaderCell: UICollectionViewCell {
     
-    let shareIcon:UIImageView={
+    var shareIcon:UIImageView={
         let imageView=UIImageView();
         imageView.contentMode = .scaleToFill;
         imageView.layer.cornerRadius=30;
@@ -26,7 +26,7 @@ class HeaderCell: UICollectionViewCell {
         return view;
     }();
     
-    let label:UILabel={
+    var label:UILabel={
         let inviteLabel = UILabel();
         inviteLabel.text = "Invite people";
         inviteLabel.textColor = UIColor.blue;

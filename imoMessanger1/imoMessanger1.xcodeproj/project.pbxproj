@@ -89,12 +89,12 @@
 				6913A0B21E9AB34A00C941E0 /* ViewController.swift */,
 				69FF496B1E9AC1AE009B9CB3 /* collectionViewCell.swift */,
 				6950567A1E9CE28D0030E001 /* HeaderCell.swift */,
+				69DA1A191E9CF6AF00A8B639 /* dataFile.swift */,
 				6913A0B41E9AB34A00C941E0 /* Main.storyboard */,
 				6913A0BA1E9AB34A00C941E0 /* Assets.xcassets */,
 				6913A0BC1E9AB34A00C941E0 /* LaunchScreen.storyboard */,
 				6913A0BF1E9AB34A00C941E0 /* Info.plist */,
 				6913A0B71E9AB34A00C941E0 /* imoMessanger1.xcdatamodeld */,
-				69DA1A191E9CF6AF00A8B639 /* dataFile.swift */,
 			);
 			path = imoMessanger1;
 			sourceTree = "<group>";

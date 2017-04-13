@@ -10,7 +10,9 @@ import UIKit
 
 class FrontViewController: UIViewController{
     
-    var collectionView:UICollectionView!
+    var collectionView:UICollectionView!;
+    var dataArrayObj = DataSouceForCollectionView();
+    var dataArray = [NSObject]();
     
     func setupCollectionView()
     {
@@ -29,6 +31,7 @@ class FrontViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad();
         setupCollectionView();
+        dataArray = dataArrayObj.getData();
     }
     
 
@@ -48,7 +51,7 @@ extension FrontViewController:UICollectionViewDelegate,UICollectionViewDataSourc
         if(section == 0){
             return 2;
         }
-        return 10;
+        return dataArray.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -64,6 +67,11 @@ extension FrontViewController:UICollectionViewDelegate,UICollectionViewDataSourc
         else{
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! collectionViewCell;
             cell.awakeFromNib();
+            let data = dataArray[indexPath.row] as! dataFile;
+            cell.profilePic.image = data.image!;
+            cell.recentMsgLabel.text = data.message!;
+            cell.dateAndTimeLabel.text = data.date!;
+            cell.nameLabel.text = data.name!;
             return cell;
         }
     }

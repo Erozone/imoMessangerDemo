@@ -57,15 +57,6 @@
         <!--ContactsView Controller-->
         <scene sceneID="ftv-fQ-38m">
             <objects>
-                <searchDisplayController id="pEk-Oo-6bR">
-                    <connections>
-                        <outlet property="delegate" destination="tvD-2D-4wP" id="2V2-md-3bi"/>
-                        <outlet property="searchContentsController" destination="tvD-2D-4wP" id="5ru-UA-owY"/>
-                        <outlet property="searchResultsDataSource" destination="tvD-2D-4wP" id="s3T-4P-gab"/>
-                        <outlet property="searchResultsDelegate" destination="tvD-2D-4wP" id="LBC-U5-ds0"/>
-                    </connections>
-                </searchDisplayController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XvY-y1-MPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tvD-2D-4wP" userLabel="ContactsView Controller" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fIw-g8-VE0"/>
@@ -96,6 +87,15 @@
                         <outlet property="searchDisplayController" destination="pEk-Oo-6bR" id="tXw-ai-Rr4"/>
                     </connections>
                 </viewController>
+                <searchDisplayController id="pEk-Oo-6bR">
+                    <connections>
+                        <outlet property="delegate" destination="tvD-2D-4wP" id="2V2-md-3bi"/>
+                        <outlet property="searchContentsController" destination="tvD-2D-4wP" id="5ru-UA-owY"/>
+                        <outlet property="searchResultsDataSource" destination="tvD-2D-4wP" id="s3T-4P-gab"/>
+                        <outlet property="searchResultsDelegate" destination="tvD-2D-4wP" id="LBC-U5-ds0"/>
+                    </connections>
+                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvY-y1-MPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1680.8" y="2043.3283358320841"/>
         </scene>
@@ -103,7 +103,7 @@
         <scene sceneID="0Z6-2T-gX8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Sf-kT-xdI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contacts" id="D0I-IS-But" userLabel="Contacts"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="people" id="D0I-IS-But" userLabel="Contacts"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hsY-xF-zuy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -122,7 +122,7 @@
         <scene sceneID="XkC-Ni-hEd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TPV-bU-V6q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chats" id="jPd-dj-xTy" userLabel="Chats"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="chatIcon" id="jPd-dj-xTy" userLabel="Chats"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="233-h3-5nb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -158,7 +158,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chatIcon" width="32" height="32"/>
         <image name="newMsg" width="32" height="32"/>
+        <image name="people" width="32" height="32"/>
         <image name="setting" width="32" height="32"/>
     </resources>
 </document>
